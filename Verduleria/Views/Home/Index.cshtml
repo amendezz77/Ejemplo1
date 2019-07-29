@@ -1,0 +1,57 @@
+﻿@model List<Verduleria.Models.Articulo>
+
+
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Verdulería de Doña Pochola</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+    
+</head>
+<body>
+    <div>
+        <div class="row" style="border:2px dashed red;padding-bottom:-30px; background-color:gray;margin-right:0px;">
+            <div class=" jumbotron col-sm-10" id="cabecera"><h1 id="ht-polola">Verdulería de Pocha Polola</h1></div>
+            <div class="cols-sm-2"><img id="pochola" src="../IMG/pochola.jpg"></div>
+        </div>
+         <div id="listado" style="height:400px;overflow:auto;background-color:azure;">
+             <table class="table table-striped table-hover" id="verdura" style="background-color:white;">
+                 <thead>
+                     <tr>
+                         <th>Codigo</th>
+                         <th>Descripción&nbsp;</th>
+                         <th>Precio&nbsp;</th>
+                         <th>Modificar / Borrar&nbsp;</th>
+                     </tr>
+                 </thead>
+                 <tbody>
+
+                     @foreach (var Articulo in Model)
+                     {
+                         <tr>
+                             <td>@Articulo.Codigo</td>
+                             <td>@Articulo.Descripcion</td>
+                             <td>@Articulo.Precio</td>
+
+                             <td>
+                                 <a href="/Home/Modificacion?cod=@Articulo.Codigo" target="_parent"><img src="../img/modificar.jpg" style="width:20px;height:20px;" alt="Modificar"></a>
+                                 <a href="/Home/Baja?cod=@Articulo.Codigo" target="_top"><img src="../img/borrar.jpg" style="width:20px;height:20px;" alt="Borrar"></a>
+                             </td>
+
+                         </tr>
+                     }
+                 </tbody>
+
+             </table>
+            </div>
+        <br />
+        <a class="btn-personaly" href="/HOME/ALTA">Alta</a>
+    </div>
+</body>
+</html>

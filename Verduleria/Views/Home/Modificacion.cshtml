@@ -1,0 +1,47 @@
+﻿@model Verduleria.Models.Articulo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Modificación</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body style="background-color:gray;">
+    <br />
+    <br />
+    <br />
+    <center>
+        <div style="border:1px double gray;width:500px;margin-left:10px;background-color:white;">
+            <div style="border:1px double gray;width:499px;">
+                <h1>Formulario para modificación de registros</h1>
+                <div style="width:350px;margin-left:20px;background-color:antiquewhite;">
+                    <table class="table">
+                        <form method="post" action="/Home/Modificacion" class="form-group">
+                            <tr>
+                                <td>Codigo:</td>
+                                <td><input type="text" name="codigo" value="@Model.Codigo" readonly /></td>
+                            </tr>
+                            <tr>
+                                <td>Descripcion:</td>
+                                <td><input type="text" name="descripcion" value="@Model.Descripcion" /></td>
+                            </tr>
+                            <tr>
+                                <td>Precio:</td>
+                                <td><input type="text" name="precio" value="@Model.Precio" /></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" value="Confirmar" class="btn-default" /></td>
+                                <td></td>
+                            </tr>
+                        </form>
+                    </table>
+                </div>
+            </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+        <title>Alta</title>
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body  style="background-color:gray;">
+    <br />
+    <br />
+    <br />
+    <center>
+        <div style="border:1px double gray;width:500px;margin-left:10px;background-color:white;">
+            <div style="border:1px double gray;width:499px;">
+                <h1>Formulario de alta registros</h1>
+                <div style="width:350px;margin-left:20px;background-color:antiquewhite;">
+                    <table class="table">
+                        <form method="post" action="/Home/Alta" class="form-group">
+                            <tr>
+                                <td>Codigo:</td>
+                                <td><input type="text" name="codigo" /></td>
+                            </tr>
+                            <tr>
+                                <td>Descripcion:</td>
+                                <td><input type="text" name="descripcion" /></td>
+                            </tr>
+                            <tr>
+                                <td>Precio:</td>
+                                <td><input type="text" name="precio" /></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" value="Confirmar" class="btn-default" /></td>
+                                <td></td>
+                            </tr>
+                        </form>
+                    </table>
+                </div>
+            </div>
+    </center>
+</body>
+</html>

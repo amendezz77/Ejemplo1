@@ -1,0 +1,62 @@
+﻿
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+#verdura {
+    margin-right:0px;
+    margin-top:0px;
+}
+#verdura tr td {
+    border: 1px solid orange;
+}
+
+#verdura thead {
+    border: 1px solid orange;
+    background-color:beige;
+}
+
+.btn-personaly {
+    text-shadow: 2px 0px 10px 6px #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: black;
+    border: 2px  solid black;
+    background-color: #b2b0b0;
+    margin-left: 10px;
+}
+ .btn-personaly:hover {
+      text-decoration: none;
+      text-shadow: 2px 0px 10px 20px #00d3f1;
+      color: red;
+      border: 2px double #00d3f1;
+  }
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+#pochola {
+    width:15%;
+    height:200px;
+    text-align:justify;
+}
+#ht-polola {
+    text-shadow: -2px 3px 2px gray;
+}
